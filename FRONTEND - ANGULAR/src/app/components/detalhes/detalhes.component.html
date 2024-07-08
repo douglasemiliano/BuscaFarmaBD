@@ -1,0 +1,91 @@
+<div class="mapa-container">
+  <app-mapa-detalhe></app-mapa-detalhe>
+</div>
+<ng-container *ngIf="farmacia">
+  
+  <mat-tab-group>
+    <mat-tab label="Detalhes">
+      
+      <div class="container">
+        <div class="header">
+          <h1 *ngIf="farmacia.nomeFantasia"><strong>{{ farmacia.nomeFantasia }}</strong></h1>
+          <h1 *ngIf="!farmacia.nomeFantasia"><strong>{{ farmacia.nome }}</strong></h1>
+            <div *ngIf="this.avaliacao">
+              <img *ngIf="this.avaliacao.media === 5" src="https://i.pinimg.com/originals/6d/39/54/6d39549c3a9c72db2aa16845fb487662.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+              <img *ngIf="this.avaliacao.media < 5 && this.avaliacao.media >= 4" src="https://i.pinimg.com/originals/d0/6a/ce/d06aced184743be500aab4dfa0256f0f.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+              <img *ngIf="this.avaliacao.media < 4 && this.avaliacao.media >= 3" src="https://i.pinimg.com/originals/a0/2d/3b/a02d3b371124feede5441cc31af03256.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">  
+              <img *ngIf="this.avaliacao.media < 3 && this.avaliacao.media >= 2" src="https://i.pinimg.com/originals/eb/3f/84/eb3f849c263c3ed24eaf23fcab4a75ad.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">    
+              <img *ngIf="this.avaliacao.media < 2 && this.avaliacao.media >= 1" src="https://i.pinimg.com/originals/a7/eb/13/a7eb13cf60add3e320bd2b4660e9d87f.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+              <img *ngIf="this.avaliacao.media < 1 && this.avaliacao.media > 0" src="https://i.pinimg.com/originals/30/22/14/3022141f9c61b7863349eec1dc50070e.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+            </div>
+        </div>
+        <p style="font-size: 9pt;" *ngIf="posicaoUsuario"> aproximadamente {{calculateDistance(farmacia.coordenadaGeo.coordinates[0], farmacia.coordenadaGeo.coordinates[1])}}km de distância</p>
+
+        <div class="endereco d-flex align-items-top justify-content-between">
+          <div class="info-endereco d-flex justify-content-center align-items-center">
+            <span class="mx-2">
+              <i class="fas fa-map-marker-alt" style="font-size: 35pt; color: green;"></i>
+            </span>
+            <span>
+              <p style="font-size: 12pt;">Rua: {{ farmacia.endereco.rua }}, {{ farmacia.endereco.numero }}.
+                <br>
+              {{ farmacia.endereco.bairro }}, {{ farmacia.municipio }} - {{ farmacia.estado }}</p>
+            </span>
+          </div>
+          
+          
+          <div class="botao-goTo">
+            <button mat-fab color="warn" (click)="goToMaps(farmacia.longLat)" title="Navegar">
+                <i class="fas fa-arrow-right fa-2x"></i>
+            </button>
+          </div>
+          
+        </div>
+      </div>
+
+    </mat-tab>
+    <mat-tab label="Produtos">
+      <!-- Lista de produtos -->
+      <div class="container" *ngIf="this.avaliacao && this.avaliacao.produtos.length > 0" style="overflow-y: visible; height: 20rem;">
+        <p style="text-align: center;">
+          <strong>Produtos Disponíveis</strong> 
+        </p>
+        <div class="card p-3 my-2 d-flex flex-row justify-content-between" *ngFor="let produto of this.avaliacao.produtos">
+          <strong>{{ produto.principioAtivo }}</strong> 
+          <span style="font-size: 10pt; color: grey;" >
+            Atualizado em: {{produto.dataAvaliacao | date: 'dd/MM/yyyy'}}
+          </span>
+        </div>
+      <!-- Empty state -->
+      <p *ngIf="!this.avaliacao || this.avaliacao.produtos.length === 0">Nenhum produto disponível.</p>
+      </div>
+    </mat-tab>
+    <mat-tab label="Avaliações">
+      <!-- Rating em formato de estrelas -->
+      <div class="container conteudo d-flex flex-column">
+        <div class="avaliacoes">
+          <span class="w-100" *ngIf="this.avaliacao">
+            <star-rating [starType]="'svg'" [readOnly]="true" [rating]="this.avaliacao.media"></star-rating>
+            <p style="text-align: center;"> Média: <strong>{{this.avaliacao.media}}</strong> </p>
+          </span>
+
+          <div *ngIf="this.avaliacao && this.avaliacao.comentarios.length > 0">
+
+            <blockquote style="margin-bottom: 1rem; font-size: 12pt; font-style: italic; d-flex" *ngFor="let comentario of this.avaliacao.comentarios">
+              <i class="fa-solid fa-quote-left mr-2"></i>
+              <span>
+                {{comentario.texto}}
+              </span>
+            </blockquote>
+          </div>
+
+          <!-- Empty state -->
+          <p *ngIf="!this.avaliacao || this.avaliacao.comentarios.length === 0">Nenhum comentário ainda.</p>        </div>
+        <button class="btn btn-warning" (click)="goToAvaliacao()">Avaliar</button>
+      </div>
+
+    </mat-tab>
+  </mat-tab-group>
+
+
+</ng-container>

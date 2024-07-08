@@ -1,0 +1,24 @@
+<!-- This button triggers the overlay and is it's origin -->
+
+<div class="container">
+  
+  <button mat-fab color="warn" (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin" style="background-color: green;">
+    <mat-icon>{{icone}}</mat-icon>
+  </button>
+  
+  <!-- This template displays the overlay content and is connected to the button -->
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+    <div class="d-flex flex-column">
+      <button color="warn" mat-mini-fab aria-label="Example icon button with a plus one icon" style="margin-left: 0.5rem; margin-top: 0.5rem;"
+      (click)="onPertoClick()">
+        <mat-icon>my_location</mat-icon>
+      </button>
+      <button color="warn" mat-mini-fab aria-label="Example icon button with a plus one icon" style="margin-left: 0.5rem; margin-top: 0.5rem;"
+      (click)="onLimparClick()">
+        <mat-icon>block</mat-icon>
+      </button>
+
+    </div>
+  </ng-template>
+
+</div>

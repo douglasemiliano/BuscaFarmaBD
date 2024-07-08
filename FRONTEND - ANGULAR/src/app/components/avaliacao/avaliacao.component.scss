@@ -1,0 +1,65 @@
+.rating-label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .sub-label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .stars-container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .legenda {
+        font-size: 10pt;
+        text-align: center;
+        margin-top: 1rem;
+    }
+  }
+
+  
+  .star {
+    display: inline-block;
+    width: 50px; /* Largura de cada estrela */
+    height: 50px; /* Altura de cada estrela */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Empty_Star.svg/2048px-Empty_Star.svg.png'); /* URL da imagem da estrela */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .star.active {
+    background-image: url("https://t3.ftcdn.net/jpg/01/09/84/42/360_F_109844239_A7MdQSDf4y1H80cfvHZuSa0zKBkZ68S7.jpg");
+  }
+  
+  .star.inactive {
+    background-color: transparent; /* Cor da estrela inativa (não preenchida) */
+  }
+
+  .rating {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow-y: auto;
+  }
+  
+  .alinhar-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .show {
+    visibility: visible;
+  }
+
+  .hide {
+    visibility: hidden;
+  }

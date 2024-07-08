@@ -1,0 +1,142 @@
+<nav *ngIf="step === 2">
+    <button class="btn btn-lg mt-4" style="position: fixed;" (click)="voltarStep()" title="voltar">
+        <i class="fa-solid fa-chevron-left" style="color: white;"></i>
+    </button>
+</nav>
+<div class="content d-flex justify-content-center align-items-center"
+    style="width: 100vw; height: 100vh; color: white;">
+    <div class="container text-center">
+        <img src="https://i.imgur.com/EUkZVYc.png" alt="" style="width: 80%;">
+        <p class="lead" style="font-size: 12pt;">Encontre a farmácia mais próxima de você</p>
+
+        <div class="container mt-3" *ngIf="step === 1">
+            <h1>
+                Como você quer realizar a busca?
+            </h1>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-primary btn-lg w-100 my-2" (click)="pesquisarPorProximidade()">Mais próximas de mim</button>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-success btn-lg w-100 my-2"
+                        (click)="selecionarTipoBusca('estado')">Estado</button>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-danger btn-lg w-100 my-2"
+                        (click)="selecionarTipoBusca('municipio')">Municipio</button>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-warning btn-lg w-100 my-2"
+                        (click)="selecionarTipoBusca('bairro')">Bairro</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container" *ngIf="step === 2">
+            <div class="row" *ngIf="tipoBusca === 'estado'">
+                <h3>Busca de Farmácias por Estado</h3>
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="col-12">
+                            <ng-select [items]="estados" [formControl]="estado" bindLabel="estado"
+                            bindValue="uf" placeholder="Selecione o estado"></ng-select>
+
+                            <button class="btn btn-danger w-100 my-2" type="submit" id="button-addon2"
+                                (click)="onSubmit()" [disabled]="estado.invalid">
+                                <i class="fas fa-search"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row" *ngIf="tipoBusca === 'municipio'">
+                <h3>Busca de Farmácias por Municipio</h3>
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="col-12">
+                            <ng-select [items]="estados" [formControl]="estado" bindLabel="estado"
+                            bindValue="uf" placeholder="Selecione o estado" (ngModelChange)="carregarMunicipios($event)"></ng-select>
+                        </div>
+                        <div class="col-12 mt-2" *ngIf="municipios.length > 0">
+                            <ng-select [items]="municipios" [formControl]="pesquisa" placeholder="Selecione o municipio"></ng-select>
+                            <button class="btn btn-danger w-100 my-2" type="submit" id="button-addon2"
+                                (click)="onSubmit()" [disabled]="pesquisa.invalid">
+                                <i class="fas fa-search"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="row" *ngIf="tipoBusca === 'bairro'">
+                <h3>Busca de Farmácias por Bairro</h3>
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="col-12">
+                            <ng-select [items]="estados" [formControl]="estado" bindLabel="estado"
+                            bindValue="uf" placeholder="Selecione o estado" (ngModelChange)="carregarMunicipios($event)"></ng-select>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <ng-select [items]="municipios" [formControl]="municipio" placeholder="Selecione o municipio" (ngModelChange)="carregarBairro($event)"></ng-select>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <ng-select [items]="bairros" [formControl]="pesquisa" placeholder="Selecione o bairro"></ng-select>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <!-- <input type="text" class="form-control upper" placeholder="Bairro"
+                                [formControl]="pesquisa" aria-label="Buscar" aria-describedby="button-addon2"> -->
+                            <button class="btn btn-danger w-100 my-2" type="submit" id="button-addon2"
+                                (click)="onSubmit()" [disabled]="pesquisa.invalid">
+                                <i class="fas fa-search"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="row" *ngIf="tipoBusca === 'proximidade'">
+                <h3>Encontrar farmácias próximas a mim!</h3>
+                <div class="card my-4 p-0">
+                    <div class="card-header text-white d-flex align-items-center">
+                        <i class="fas fa-times-circle me-2"></i>
+                        <h5 class="m-0">
+                            Permissão de localização negada!
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-0">
+                            A permissão de acesso à localização foi negada. Para permitir a localização, vá para as configurações do navegador e ative a permissão de localização para este site e recarregue esta página.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+             <div class="container">
+                <button class="btn btn-warning" (click)="voltarStep()">voltar</button>
+            </div>
+        </div>
+
+
+        <!-- <div class="col">
+            <button class="btn btn-secondary">Municipio</button>
+        </div>
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control upper" placeholder="Buscar" [formControl]="pesquisa" aria-label="Buscar" aria-describedby="button-addon2">
+                <button class="btn btn-secondary" type="submit" id="button-addon2" (click)="onSubmit()" >
+                    <i class="fas fa-search"></i>
+                </button>
+              </div>
+        </form>
+     -->
+    </div>
+
+</div>

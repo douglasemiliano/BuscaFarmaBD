@@ -1,0 +1,16 @@
+Atenção 
+
+Antes de executar o código flask, é necessário instalar as bibliotecas necessárias, para correto funcionamento do código. 
+
+Por favor execute o código abaixo em algum terminal:
+
+pip install -r requirements.txt
+
+
+Como Usar:
+
+Execute o arquivo Python: python etl_farma_incm.py;
+
+Acesse o endpoint /processar_arquivo_xlsx no seu navegador ou através de um cliente HTTP para iniciar o processamento do arquivo .xlsx;
+
+Certifique-se de substituir /content/Farmacias_Credenciadas.xlsx pelo caminho correto do seu arquivo .xlsx no servidor onde o Flask está sendo executado.

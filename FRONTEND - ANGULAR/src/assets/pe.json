@@ -1,0 +1,440 @@
+{
+  "farmacias": [
+    {
+      "nome": "ACCIOLY COMERCIO FARMACEUTICO LTDA",
+      "longLat": [
+        -34.91573946375,
+        -8.148074445275
+      ],
+      "nomeFantasia": "FARMACIA DO TRABALHADOR",
+      "endereco": {
+        "rua": "AVENIDA ARMINDO MOURA",
+        "numero": "391",
+        "bairro": "PIEDADE",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000123",
+      "avaliacoes": [
+        {
+          "comentario": "Farmacia muito boa, o atendente foi bem solicito e tinha varias opcoes de absorventes",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-06-11T03:00:00.000Z",
+            "gender": "female"
+          },
+          "produtos": [
+            "Absorvente"
+          ],
+          "rating": 5,
+          "estruturaFarmacia": {
+            "fila": "Pouca fila",
+            "qualidadeAtendimento": "Otimo",
+            "isProdutoDisponivel": "Sim",
+            "tipoProduto": "Absorvente",
+            "horario": "tarde"
+          }
+        },
+        {
+          "comentario": "Pessimo, farmacia quente, sem cadeiras e um monte de velho na fila pra pegar remedio de pressao. ",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-06-02T03:00:00.000Z",
+            "gender": "female"
+          },
+          "produtos": [
+            "Insulina Humana 100UI/ML"
+          ],
+          "rating": 1,
+          "estruturaFarmacia": {
+            "fila": "Muita fila",
+            "qualidadeAtendimento": "Pessimo",
+            "isProdutoDisponivel": "Sim",
+            "tipoProduto": "Remédio",
+            "horario": "manha"
+          }
+        },
+        {
+          "comentario": "muito boa, recomendo!",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-06-12T03:00:00.000Z",
+            "gender": "male"
+          },
+          "produtos": [
+            "Insulina Humana 100UI/ML",
+            "Cloridrato de Propranolol 40mg",
+            "Furosemida 40mg"
+          ],
+          "rating": 4,
+          "estruturaFarmacia": {
+            "fila": "Muita fila",
+            "qualidadeAtendimento": "Otimo",
+            "isProdutoDisponivel": "Sim",
+            "tipoProduto": "Remédio",
+            "horario": "tarde"
+          }
+        },
+        {
+          "comentario": "boa!",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-06-19T03:00:00.000Z",
+            "gender": "male"
+          },
+          "produtos": [
+            "Atenolol 25mg"
+          ],
+          "rating": 5,
+          "estruturaFarmacia": {
+            "fila": "Pouca fila",
+            "qualidadeAtendimento": "Bom",
+            "isProdutoDisponivel": "",
+            "tipoProduto": "",
+            "horario": "tarde"
+          },
+          "dataAvaliacao": "2024-06-05T02:14:29.986Z"
+        },
+        {
+          "comentario": "rerer",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-06-20T03:00:00.000Z",
+            "gender": "male"
+          },
+          "produtos": [
+            "Espironolactona 25mg",
+            "Atenolol 25mg"
+          ],
+          "rating": 5,
+          "estruturaFarmacia": {
+            "fila": "",
+            "qualidadeAtendimento": "Regular",
+            "isProdutoDisponivel": "Não",
+            "tipoProduto": "Remédio",
+            "horario": ""
+          },
+          "dataAvaliacao": "2024-06-13T23:52:50.109Z"
+        }
+      ]
+    },
+    {
+      "nome": "BELTRAO FARMACIA LTDA",
+      "longLat": [
+        -34.919028506502,
+        -8.191371256862
+      ],
+      "nomeFantasia": "G FARMA",
+      "endereco": {
+        "rua": "RUA DOUTOR ANICETO VAREJAO",
+        "numero": "100",
+        "bairro": "CANDEIAS",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000234",
+      "avaliacoes": [
+        {
+          "comentario": "A atendente e entojada, mas tem ar condicionado e cadeiras para sentar!!!",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-05-07T03:00:00.000Z",
+            "gender": "female"
+          },
+          "produtos": [
+            "Insulina Humana 100UI/ML",
+            "Furosemida 40mg",
+            "Espironolactona 25mg",
+            "Absorvente"
+          ],
+          "rating": 3,
+          "estruturaFarmacia": {
+            "fila": "Pouca fila",
+            "qualidadeAtendimento": "Bom",
+            "isProdutoDisponivel": "Sim",
+            "tipoProduto": "Remédio",
+            "horario": "tarde"
+          }
+        },
+        {
+          "comentario": "teste",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "2024-06-25T03:00:00.000Z",
+            "gender": "male"
+          },
+          "produtos": [
+            "Atenolol 25mg"
+          ],
+          "rating": 5,
+          "estruturaFarmacia": {
+            "fila": "",
+            "qualidadeAtendimento": "",
+            "isProdutoDisponivel": "",
+            "tipoProduto": "",
+            "horario": ""
+          }
+        },
+        {
+          "comentario": "teste 2",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "",
+            "gender": "male"
+          },
+          "produtos": [],
+          "rating": 1,
+          "estruturaFarmacia": {
+            "fila": "",
+            "qualidadeAtendimento": "",
+            "isProdutoDisponivel": "",
+            "tipoProduto": "",
+            "horario": ""
+          }
+        }
+      ]
+    },
+    {
+      "nome": "D C DA ROCHA LTDA",
+      "longLat": [
+        -34.967842099707,
+        -8.097243894868
+      ],
+      "nomeFantasia": "FARMACIA SANTA ROSA",
+      "endereco": {
+        "rua": "AVENIDA GENERAL MANOEL RABELO",
+        "numero": "5179",
+        "bairro": "CAVALEIRO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000345",
+      "avaliacoes": [
+        {
+          "comentario": "Muito boa, tem ar condicionado e cadeira para sentar!",
+          "informacoes": {
+            "name": "",
+            "cpf": "",
+            "birthDate": "1995-11-08T03:00:00.000Z",
+            "gender": "male"
+          },
+          "produtos": [
+            "Atenolol 25mg",
+            "Captopril 25mg",
+            "Espironolactona 25mg",
+            "Cloridrato de Propranolol 40mg"
+          ],
+          "rating": 5,
+          "estruturaFarmacia": {
+            "fila": "Muita fila",
+            "qualidadeAtendimento": "Otimo",
+            "isProdutoDisponivel": "Sim",
+            "tipoProduto": "Remédio",
+            "horario": "tarde"
+          },
+          "dataAvaliacao": "2024-06-13T22:31:05.422Z"
+        }
+      ]
+    },
+    {
+      "nome": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "longLat": [
+        -34.917919400576,
+        -8.179643199863
+      ],
+      "nomeFantasia": "FARMACIA PAGUE MENOS",
+      "endereco": {
+        "rua": "AVENIDA BERNARDO VIEIRA DE MELO",
+        "numero": "3000",
+        "bairro": "PIEDADE",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000456"
+    },
+    {
+      "nome": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "longLat": [
+        -34.919028506502,
+        -8.191371256862
+      ],
+      "nomeFantasia": "",
+      "endereco": {
+        "rua": " DR. ANICETO VAREJAO",
+        "numero": "100",
+        "bairro": "PIEDADE",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000567"
+    },
+    {
+      "nome": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "longLat": [
+        -34.912353125265,
+        -8.157565307209
+      ],
+      "nomeFantasia": "FARMACIA PAGUE MENOS",
+      "endereco": {
+        "rua": "AVENIDA AYRTON SENNA DA SILVA",
+        "numero": "2674",
+        "bairro": "PIEDADE",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000678"
+    },
+    {
+      "nome": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "longLat": [
+        -34.925597391522,
+        -8.162865018548
+      ],
+      "nomeFantasia": "FARMACIA PAGUE MENOS",
+      "endereco": {
+        "rua": "AVENIDA BARRETO DE MENEZES",
+        "numero": "419",
+        "bairro": "CAJUEIRO SECO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000789"
+    },
+    {
+      "nome": "FARMACIA TALENTO LTDA",
+      "longLat": [
+        -35.017658013393,
+        -8.113343519211
+      ],
+      "nomeFantasia": "FARMACIA TALENTO",
+      "endereco": {
+        "rua": "RUA CORONEL CAMARA LIMA",
+        "numero": "95",
+        "bairro": "CENTRO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000890"
+    },
+    {
+      "nome": "JOSIANE BARBOSA SOUZA",
+      "longLat": [
+        -34.972485674067,
+        -8.081002616361
+      ],
+      "nomeFantasia": "FARMACIA IDEAL",
+      "endereco": {
+        "rua": "RUA HELIO LOBO COSTA",
+        "numero": "85-A",
+        "bairro": "CAVALEIRO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678000901"
+    },
+    {
+      "nome": "MV FARMACIA POPULAR COMERCIO FARMACEUTICO LTDA",
+      "longLat": [
+        -34.998798786424,
+        -8.076802439929
+      ],
+      "nomeFantasia": "M V FARMACIA POPULAR",
+      "endereco": {
+        "rua": "AVENIDA DOLORES DURAN",
+        "numero": "68",
+        "bairro": "CURADO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678001012"
+    },
+    {
+      "nome": "TABOCAS PRODUTOS FARMACEUTICOS LTDA",
+      "longLat": [
+        -35.023051759527,
+        -8.113940749338
+      ],
+      "nomeFantasia": "DROGARIA JABOATAO",
+      "endereco": {
+        "rua": "AVENIDA BARAO DE LUCENA",
+        "numero": "284",
+        "bairro": "CENTRO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678001123"
+    },
+    {
+      "nome": "ZN FARMA LTDA",
+      "longLat": [
+        -35.017890507548,
+        -8.112350357009
+      ],
+      "nomeFantasia": "FARMACIAS INDEPENDENTE",
+      "endereco": {
+        "rua": "PRACA NOSSA SENHORA DO ROSARIO",
+        "numero": "472",
+        "bairro": "CENTRO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678001234"
+    },
+    {
+      "nome": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "longLat": [
+        -34.998145738795,
+        -8.077490381796
+      ],
+      "nomeFantasia": "FARMACIA PAGUE MENOS",
+      "endereco": {
+        "rua": "RUA LEONARDO DA VINCI",
+        "numero": "329",
+        "bairro": "CURADO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678001345"
+    },
+    {
+      "nome": "RAIA DROGASIL S/A",
+      "longLat": [
+        -34.973043070628,
+        -8.091585397763
+      ],
+      "nomeFantasia": "",
+      "endereco": {
+        "rua": "AVENIDA GOVERNADOR AGAMENON MAGALHAES",
+        "numero": "1116",
+        "bairro": "CAVALEIRO",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678001456"
+    },
+    {
+      "nome": "DROGARIA SAO PAULO S.A.",
+      "longLat": [
+        -34.920595215243,
+        -8.191030229223
+      ],
+      "nomeFantasia": "DROGARIA SAO PAULO",
+      "endereco": {
+        "rua": "RUA DOUTOR ANICETO VAREJAO",
+        "numero": "262",
+        "bairro": "CANDEIAS",
+        "municipio": "JABOATAO DOS GUARARAPES",
+        "estado": "PE"
+      },
+      "id": "12345678001567"
+    }
+  ]
+}

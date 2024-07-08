@@ -1,0 +1,42 @@
+<div class="card" style="width: 100%;">
+    <div class="card-header" style="background-color: white; border-bottom: none;">
+        <div class="float-end" (click)="close()">
+            <i class="fas fa-close"></i>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="header">
+              <h1 *ngIf="farmacia.nomeFantasia" style="text-align: center;"><strong>{{ farmacia.nomeFantasia }}</strong></h1>
+              <h1 *ngIf="!farmacia.nomeFantasia"><strong>Farmácia</strong></h1>
+                <div *ngIf="this.avaliacao">
+                  <img *ngIf="this.avaliacao.media === 5" src="https://i.pinimg.com/originals/6d/39/54/6d39549c3a9c72db2aa16845fb487662.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+                  <img *ngIf="this.avaliacao.media < 5 && this.avaliacao.media >= 4" src="https://i.pinimg.com/originals/d0/6a/ce/d06aced184743be500aab4dfa0256f0f.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+                  <img *ngIf="this.avaliacao.media < 4 && this.avaliacao.media >= 3" src="https://i.pinimg.com/originals/a0/2d/3b/a02d3b371124feede5441cc31af03256.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">  
+                  <img *ngIf="this.avaliacao.media < 3 && this.avaliacao.media >= 2" src="https://i.pinimg.com/originals/eb/3f/84/eb3f849c263c3ed24eaf23fcab4a75ad.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">    
+                  <img *ngIf="this.avaliacao.media < 2 && this.avaliacao.media >= 1" src="https://i.pinimg.com/originals/a7/eb/13/a7eb13cf60add3e320bd2b4660e9d87f.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+                  <img *ngIf="this.avaliacao.media < 1 && this.avaliacao.media > 0" src="https://i.pinimg.com/originals/30/22/14/3022141f9c61b7863349eec1dc50070e.gif" style="height: 3rem;" [title]="this.avaliacao.media" alt="">
+                </div>
+            </div>
+            <p style="font-size: 9pt; text-align: center;" *ngIf="posicaoUsuario"> aproximadamente {{calculateDistance(farmacia.coordenadaGeo.coordinates[0], farmacia.coordenadaGeo.coordinates[1])}}km de distância</p>
+    
+            <div class="endereco">
+              <div class="info-endereco">
+                <span>
+                  <p style="font-size: 9pt; text-align: center;">{{ farmacia.endereco.rua }}, {{ farmacia.endereco.numero }}.
+                    <br>
+                  {{ farmacia.endereco.bairro }}, {{ farmacia.municipio }} - {{ farmacia.estado }}</p>
+                </span>
+              </div>
+              
+            </div>
+          </div>
+          <div class="d-flex  justify-content-center">
+                  <button class="btn btn-danger" (click)="goToMaps(farmacia.coordenadaGeo.coordinates)" title="Navegar">
+                      <i class="fas fa-arrow-right"></i>
+                      Abrir no Maps
+                  </button>
+          </div>
+    </div>
+
+</div>

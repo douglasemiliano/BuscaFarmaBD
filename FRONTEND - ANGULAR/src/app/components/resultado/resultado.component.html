@@ -1,0 +1,39 @@
+
+<div class="mapa-container" style="position: fixed; z-index: 2;">
+    <app-mapa></app-mapa>
+</div>
+<div class="lista-farmacias">
+   
+    <div class="container" style="position: fixed; z-index: 20; margin-top: -2rem;">
+        <app-fab-button (maisProximoEvent)="ordenarPorDistancia()" (maisBemAvaliadasEvent)="reberEventoMelhorAvaliadasClick()" (limparEvent)="limparFiltros()"></app-fab-button>
+    </div>
+
+    <div class="row mx-2 contador" *ngIf="farmacias">
+        {{farmacias.length}} farmácias encontradas
+    </div>
+      
+    <div class="row">
+        <div class="col-12 col-md-3 col-sm-6" *ngFor="let farmacia of farmacias">
+            <div class="card m-2" style="cursor: pointer;" (click)="goToDetails(farmacia)">
+                <div class="card-body">
+                    <div class="nomeFarmacia text-center" style="font-size: 14pt; margin-bottom: 2rem;">
+                        <strong *ngIf="farmacia.nomeFantasia;">{{ farmacia.nomeFantasia }}</strong>
+                        <p style="font-size: 9pt;" *ngIf="posicaoUsuario"> aproximadamente {{calculateDistance(farmacia.coordenadaGeo.coordinates[0], farmacia.coordenadaGeo.coordinates[1])}}km de distância</p>
+                    </div>
+                    <div class="localizacao d-flex align-items-center justify-content-between">
+                        <div class="icone">
+                            <i class="fas fa-map-marker-alt fa-2x" style="color: lightgray;"></i>
+                        </div>
+                        <div class="endereco" style="font-size: 10pt; text-align: center;">
+                            {{ farmacia.endereco.rua }}, nº {{ farmacia.endereco.numero }}<br>
+                            {{ farmacia.endereco.bairro }}, {{ farmacia.municipio }} - {{ farmacia.estado }}
+                        </div>
+                        <button mat-fab color="warn" (click)="$event.stopPropagation(); goToMaps(farmacia.coordenadaGeo.coordinates)">
+                            <i class="fas fa-arrow-right fa-2x"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

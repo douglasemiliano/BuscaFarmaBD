@@ -1,0 +1,18 @@
+.mapa-container {
+  width: 100%;
+  height: 50vh; /* Calcula a altura do mapa descontando a altura do cabeçalho (por exemplo) */
+  overflow-y: hidden; /* Esconde o overflow para não aparecer scroll no mapa */
+}
+
+.lista-farmacias {
+  padding-top: 51vh;
+  width: 100%;
+  height: 100vh; /* Ocupa a altura total disponível */
+  overflow-y: auto; /* Ativa o scroll apenas na lista de farmácias quando necessário */
+  // padding-top: 20px; /* Adiciona espaço acima da lista para não ficar sob o mapa */
+}
+
+.contador {
+  display: flex;
+  justify-content: center;
+}

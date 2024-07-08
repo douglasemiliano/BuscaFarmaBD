@@ -1,0 +1,55 @@
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .nome {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    flex: 1;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .endereco {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .endereco h2 {
+    margin-bottom: 10px;
+  }
+  
+  .mapa-container {
+    width: 100%;
+    height: 50vh; /* Calcula a altura do mapa descontando a altura do cabeçalho (por exemplo) */
+    overflow-y: hidden; /* Esconde o overflow para não aparecer scroll no mapa */
+  }
+  
